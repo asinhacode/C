@@ -42,4 +42,27 @@ int main(int argc, const char * argv[]) {
     int j = -4;
     printf("%d\n", i + j);
     printf("%u\n", i + j); // convert into 1s complement
+    
+    
+// GLOBAL VARIABLE
+int a = -1;
+
+void printGlobal(){
+    printf("GLOBAL A: %d\n", a); // CAN BE USED HERE
 }
+
+
+
+    // scope
+    int a = 0;
+    {
+        // internal scope only available here
+        int a = 1;
+        printf("INTERNAL A: %d\n", a);
+    }
+    
+    // a available here
+    printf("EXTERNAL A: %d\n", a);
+    
+    printGlobal();
+
