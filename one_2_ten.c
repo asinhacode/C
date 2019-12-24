@@ -66,3 +66,45 @@ void printGlobal(){
     
     printGlobal();
 
+
+    
+#include <stdio.h>
+#include <limits.h>
+#include <stdbool.h> // incorporating boolean values
+
+int A; // GLOBAL VARIABLE, has default values
+bool t = true;
+
+int main(int argc, const char * argv[])
+{
+
+    auto int x;
+    
+    printf("%d\n", x);
+    
+    printf("%d\n", A);
+    
+    printf("%d\n", A);
+    
+    if(t)
+    {
+        printf("This is the truth!\n"); // prints this
+    }
+
+    else
+    printf("This is not the truth!\n");
+
+    
+}
+
+#include <stdio.h>
+
+extern int a; // obtained from an external file external.c
+int main(int argc, const char * argv[])
+{
+
+    printf("%d\n", a);
+
+    
+}
+
